@@ -24,10 +24,8 @@ def make_response(status=200, content_type='text/plain', content=None):
 	on application/json. For CORS environments and IE9 and below, the
 	content-type needs to be text/html.
 	"""
-	response = HttpResponse()
+	response = HttpResponse(content, content_type=content_type)
 	response.status_code = status
-	response['Content-Type'] = content_type
-	response.content = content
 	return response
 
 
@@ -36,14 +34,14 @@ def proxy(request):
 	try:
 		if request.method == 'GET':
 			url = request.GET.get('url')
-			params = json.loads(request.GET.get('params'))
+			params = json.loads(request.GET.get('params', '{}'))
 			r = requests.get(url, params=params)
 		elif request.method == 'POST':
 			url = request.POST.get('url')
-			params = json.loads(request.POST.get('params'))
+			params = json.loads(request.POST.get('params', '{}'))
 			r = requests.post(url, params=params)
 		# if r.status_code == requests.codes.ok:
-		return make_response(content=r.content)
+		return make_response(status=r.status_code, content_type=r.headers['content-type'], content=r.content)
 	except:
 		raise Http404('Bad request')
 	raise Http404('Invalid request type')
