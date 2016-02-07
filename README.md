@@ -40,5 +40,11 @@ python manage.py runserver 0.0.0.0:8002
 ## TODO
 Restructure the project to include client code (since `tree.py` and `features.py` are shared).
 
+Insert formula like this:
+
+![equation](http://latex.codecogs.com/png.latex?1%2Bsin%28mc%5E2%29%0D%0A)
+
+*Refferred from [here](http://stackoverflow.com/questions/12502440/markdown-formula-display-in-github)*
+
 ## Acknowledgement
 This project is built on [Aloha Editor](https://github.com/alohaeditor/Aloha-Editor)
