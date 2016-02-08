@@ -46,5 +46,7 @@ Insert formula like this:
 
 *Refferred from [here](http://stackoverflow.com/questions/12502440/markdown-formula-display-in-github)*
 
+*Alternative: [Using MathJax with Jekyll](http://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll)*
+
 ## Acknowledgement
 This project is built on [Aloha Editor](https://github.com/alohaeditor/Aloha-Editor)
