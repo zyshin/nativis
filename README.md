@@ -4,20 +4,18 @@
 * django
 * requests
 * django-cors-headers
-* lxml
 * nltk
-
-**Note: For windows, lxml usually should be installed from [wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml) with `pip install lxml-3.5.0-cp27-none-win_amd64.whl`.**
+* // lxml
 
 ### Note for installing lxml
-**For windows:**
+**For Windows (64 bit):**
 
-lxml should be installed from [wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml).
+lxml usually should be installed from [wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml).
 ```shell
 pip install lxml-3.5.0-cp27-none-win_amd64.whl
 ```
 
-**For ubuntu server 14.04.3 (64 bit):**
+**For Ubuntu Server 14.04.3 (64 bit):**
 
 lxml should be installed as follows.
 ```shell
